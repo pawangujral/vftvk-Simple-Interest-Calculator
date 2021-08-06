@@ -2,17 +2,17 @@ function compute(event) {
     event.preventDefault();
     const principal = document.getElementById("principal").value;
     const rate = document.getElementById("rate").value;
-    const time = document.getElementById("years").value;  
-    const errorNode = document.getElementById("error"); 
+    const time = document.getElementById("years").value;   
 
     if(!principal || !Number(rate) || !time) { 
-        errorNode.classList.remove("hide");
+        alert("Fields cannot be empty");
         return;
     } 
 
-    if(error) {
-        errorNode.classList.add("hide");
-    }
+    if(Number(principal) <= 0) {
+        alert("enter a positive number");
+        return;
+    } 
 
     const calculate = (principal * rate * time)/100; 
 
