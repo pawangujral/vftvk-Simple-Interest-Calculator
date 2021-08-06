@@ -1,16 +1,53 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <section>
+            <h1>Simple Interest Calculator</h1>
+            <div>
+                <form id="calculator-form">
+                    <div class="form-group"> 
+                        <label for="principal">Amount</label>
+                        <input type="number" id="principal" placeholder="Enter an amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rate</label> 
+                        <input type="range"  id="rate" value="0" min="0" max="100" step=".5" placeholder="Enter a rate">
+                        <span id="range-text">0%</span>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="years">No. of Years</label>
+                        <select id="years" name="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>  
+                    </div>
+                    <button type="submit">Compute Interest</button>
+                    <p id="error" class="hide">Fields cannot be empty</p>
+                </form> 
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+                <p id="result" class="hide">
+                    If you deposit <span id="principal-value"></span>,</br>
+                    at an interest rate of <span id="rate-value"></span></br>
+                    You will receive an amount of <span id="interest-value"></span></br>
+                    in the year <span id="year-value"></span>
+                </p>
+            </div>
+            <footer>
+                <p>&copy; Everyone can get rich.</p>
+            </footer>
+        </section>
+        
+        <script src="script.js" defer></script>
     </body>
 </html>

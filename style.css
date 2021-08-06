@@ -1,4 +1,48 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
 
+body {
+    background-color:#000;
+}
 
+section {
+    background-color: #fff;
+    max-width: 540px;
+    margin: 5px auto;
+    padding: 5px 20px;
+    border-radius: 20px;;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: gray;
+}
+
+#error {
+    color: red;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+div {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+button {
+    margin-top: 15px;
+}
