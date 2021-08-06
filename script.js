@@ -1,13 +1,8 @@
-function compute(event) {
+document.getElementById("calculator-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const principal = document.getElementById("principal").value;
     const rate = document.getElementById("rate").value;
-    const time = document.getElementById("years").value;   
-
-    if(!Number(rate) || !time) { 
-        alert("Fields cannot be empty");
-        return;
-    } 
+    const time = document.getElementById("years").value;  
 
     if(!principal || Number(principal) <= 0) {
         alert("enter a positive number");
@@ -29,10 +24,8 @@ function compute(event) {
     interestResult.innerText = calculate;
     yearResult.innerText = new Date().getFullYear() + Number(time); 
     
-}
+});   
 
-document.getElementById("calculator-form").addEventListener("submit", compute);   
-
-document.getElementById("rate").addEventListener("input", (e) => {
-    document.getElementById("range-text").innerText = `${e.target.value}%`
+document.getElementById("rate").addEventListener("input", (event) => {
+    document.getElementById("range-text").innerText = `${event.target.value}%`;
 })
