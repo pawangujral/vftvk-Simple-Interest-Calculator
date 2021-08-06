@@ -46,3 +46,7 @@ div {
 button {
     margin-top: 15px;
 }
+
+#result span {
+    background-color: yellow;
+}

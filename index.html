@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <title>Web App - Simple Interest Calculator</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -10,12 +12,12 @@
                 <form id="calculator-form">
                     <div class="form-group"> 
                         <label for="principal">Amount</label>
-                        <input type="number" id="principal" min="0" placeholder="Enter an amount">
+                        <input type="number" id="principal" placeholder="Enter an amount">
                     </div>
                     <div class="form-group">
-                        <label for="rate">Rate</label> 
-                        <input type="range"  id="rate" value="0" min="0" max="100" step=".5" placeholder="Enter a rate">
-                        <span id="range-text">0%</span>
+                        <label for="rate">Interest Rate</label> 
+                        <input type="range"  id="rate" value="0" min="1" max="20" step=".5" placeholder="Enter a rate">
+                        <span id="range-text">1%</span>
                     </div>
                     <div class="form-group"> 
                         <label for="years">No. of Years</label>
@@ -37,13 +39,13 @@
 
                 <p id="result" class="hide">
                     If you deposit <span id="principal-value"></span>,</br>
-                    at an interest rate of <span id="rate-value"></span>%</br>
-                    You will receive an amount of <span id="interest-value"></span></br>
+                    at an interest rate of <span id="rate-value"></span>%,</br>
+                    You will receive an amount of <span id="interest-value"></span>,</br>
                     in the year <span id="year-value"></span>
                 </p>
             </div>
             <footer>
-                <p>&copy; Everyone can get rich.</p>
+                <p>&copy; Everyone Can Get Rich.</p>
             </footer>
         </section>
         

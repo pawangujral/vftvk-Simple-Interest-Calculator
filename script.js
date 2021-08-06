@@ -4,13 +4,14 @@ function compute(event) {
     const rate = document.getElementById("rate").value;
     const time = document.getElementById("years").value;   
 
-    if(!principal || !Number(rate) || !time) { 
+    if(!Number(rate) || !time) { 
         alert("Fields cannot be empty");
         return;
     } 
 
-    if(Number(principal) <= 0) {
+    if(!principal || Number(principal) <= 0) {
         alert("enter a positive number");
+        document.getElementById("principal").focus();
         return;
     } 
 
